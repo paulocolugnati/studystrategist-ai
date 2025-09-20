@@ -74,6 +74,36 @@ export type Database = {
         }
         Relationships: []
       }
+      essays: {
+        Row: {
+          created_at: string | null
+          feedback: string | null
+          id: string
+          score: number | null
+          tema: string
+          texto: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          feedback?: string | null
+          id?: string
+          score?: number | null
+          tema: string
+          texto: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          feedback?: string | null
+          id?: string
+          score?: number | null
+          tema?: string
+          texto?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       planos_estudos: {
         Row: {
           created_at: string
@@ -245,10 +275,35 @@ export type Database = {
         }
         Relationships: []
       }
+      study_plans: {
+        Row: {
+          created_at: string | null
+          focus_area: string
+          id: string
+          plan_content: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          focus_area: string
+          id?: string
+          plan_content: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          focus_area?: string
+          id?: string
+          plan_content?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       usuarios: {
         Row: {
           created_at: string
           id: string
+          is_premium: boolean | null
           nome: string
           objetivo: string | null
           plano: string | null
@@ -258,6 +313,7 @@ export type Database = {
         Insert: {
           created_at?: string
           id?: string
+          is_premium?: boolean | null
           nome: string
           objetivo?: string | null
           plano?: string | null
@@ -267,6 +323,7 @@ export type Database = {
         Update: {
           created_at?: string
           id?: string
+          is_premium?: boolean | null
           nome?: string
           objetivo?: string | null
           plano?: string | null

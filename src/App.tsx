@@ -9,6 +9,14 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Registro from "./pages/Registro";
 import Dashboard from "./pages/Dashboard";
+import ChatIA from "./pages/ChatIA";
+import CorrecaoRedacao from "./pages/CorrecaoRedacao";
+import Simulados from "./pages/Simulados";
+import PlanoEstudos from "./pages/PlanoEstudos";
+import Biblioteca from "./pages/Biblioteca";
+import Estatisticas from "./pages/Estatisticas";
+import Perfil from "./pages/Perfil";
+import Premium from "./pages/Premium";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,7 +57,14 @@ const App = () => (
               </ProtectedRoute>
             }>
               <Route path="dashboard" element={<Dashboard />} />
-              {/* Adicionar outras rotas protegidas aqui */}
+              <Route path="chat-ia" element={<ChatIA />} />
+              <Route path="correcao-redacao" element={<CorrecaoRedacao />} />
+              <Route path="simulados" element={<Simulados />} />
+              <Route path="plano-estudos" element={<PlanoEstudos />} />
+              <Route path="biblioteca" element={<Biblioteca />} />
+              <Route path="estatisticas" element={<Estatisticas />} />
+              <Route path="perfil" element={<Perfil />} />
+              <Route path="premium" element={<Premium />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
